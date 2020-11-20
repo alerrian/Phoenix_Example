@@ -17,6 +17,7 @@ defmodule PhoenixAppWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "/albums", AlbumsController, :index
   end
 
   # Other scopes may use custom stacks.
