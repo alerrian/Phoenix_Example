@@ -6,9 +6,10 @@ use Mix.Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :phoenix_app, PhoenixApp.Repo,
+  adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
-  database: "phoenix_app_test#{System.get_env("MIX_TEST_PARTITION")}",
+  password: "",
+  database: "phoenix_app_test",
   hostname: "localhost",
   template: "template0",
   pool: Ecto.Adapters.SQL.Sandbox
